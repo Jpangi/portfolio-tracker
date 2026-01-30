@@ -1,0 +1,11 @@
+.pie-chart-card{
+    display: flex;
+    border: solid #bcb8b1 3px;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: white;
+    text-align: center;
+    max-width: 400px; 
+    margin: 5px;
+    padding: 20px; 
+}

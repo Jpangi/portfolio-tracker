@@ -1,0 +1,16 @@
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.dashboard-container {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  align-items: flex-start; /* Align tops */
+  justify-content: center; /* Center horizontally */
+  flex-direction: column; /* Wrap on small screens */
+  padding: 20px;
+}
+
+

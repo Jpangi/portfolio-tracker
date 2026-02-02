@@ -1,30 +1,91 @@
+/* Navbar Container */
+.navbar-container {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Navbar */
 .nav-bar {
-    padding: 10px 20px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .nav-bar ul {
-    list-style: none;
-    display: flex;
-    gap: 15px; /* space between buttons */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
 
-
+/* Navigation Links */
 .nav-bar a {
-    text-decoration: none; /* remove underline */
-    color: black; /* text color */
-    background-color: white; /* button background */
-    padding: 8px 16px; /* button padding */
-    border-radius: 20px; /* makes the button fully rounded */
-    transition: background-color 0.3s, transform 0.2s;
-    font-weight: 500;
+  text-decoration: none;
+  color: #4a5568;
+  background-color: #f7fafc;
+  padding: 0.625rem 1.25rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border: 1px solid transparent;
 }
 
 .nav-bar a:hover {
-    background-color: #e7e6e4; /* slightly lighter on hover */
-    transform: scale(1.05); /* small hover effect */
+  background-color: #edf2f7;
+  color: #2d3748;
+  transform: translateY(-1px);
+  border-color: #e2e8f0;
+}
+
+.nav-bar a:active {
+  transform: translateY(0);
+}
+
+/* Active Link Style (optional) */
+.nav-bar a.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.nav-bar a.active:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #6a3f8f 100%);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-bar ul {
+    gap: 0.5rem;
+  }
+  
+  .nav-bar a {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-bar a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
 }

@@ -1,43 +1,192 @@
+/* Stock List Main Container */
+.stock-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
-.stock-list{
-    display: flex;
-        /* border: solid #bcb8b1 3px; */
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: fit-content;
-        background-color: white;
-        margin: 10px;
-        padding: 0;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.stock-list-card {
-    display: flex;
-}
+/* Stock List Header */
 .stock-list-card-header {
-
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
 }
 
+/* Refresh Section */
+.stock-list-card-refresh {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stock-list-card-refresh button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.4);
+}
+
+.stock-list-card-refresh button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.5);
+}
+
+.stock-list-card-refresh button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.stock-list-card-refresh span {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+/* Stock Cards Grid */
+.stock-list-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual Stock Card */
 .stock-list-card-items {
-    text-align: center;
-    font-weight: bolder;
-    padding: 3px;
-    display: flex;
-    background-color: #FAF9F6;
-    border: solid #bcb8b1 3px;
-    border-radius: 10px;
-    margin: 5px;
-    flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 1.25rem;
+  list-style: none;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
 }
 
-.stock-list-card-items-value{
-    display: flex;
-    justify-content: center;
-    font-size: 1.7em;
-
+.stock-list-card-items:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
-stock-list-card-items-historical{
-    background-color: blue;
+.stock-list-card-items:nth-child(3) {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  color: #2d3748;
+}
+
+.stock-list-card-items:nth-child(4) {
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #2d3748;
+}
+
+.stock-list-card-items:nth-child(5) {
+  background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%);
+  color: #2d3748;
+}
+
+.stock-list-card-items:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Stock Symbol and Change Indicator */
+.stock-list-card-items > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.stock-list-card-items > div:first-child p {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.stock-list-card-items > div:first-child span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Current Value Section */
+.stock-list-card-items > p:first-of-type {
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin: 0 0 0.5rem 0;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Value Display */
+.stock-list-card-items-value {
+  display: block;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+  line-height: 1.2;
+}
+
+/* Historical Data Section */
+.stock-list-card-items-historical {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stock-list-card-items-historical p {
+  font-size: 0.75rem;
+  margin: 0.25rem 0;
+  opacity: 0.9;
+}
+
+/* Mini chart decoration (optional) */
+.stock-list-card-items::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(30%, -30%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stock-list-card {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  .stock-list {
+    padding: 1rem;
+  }
+  
+  .stock-list-card-items {
+    padding: 1rem;
+  }
+  
+  .stock-list-card-items-value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stock-list-card {
+    grid-template-columns: 1fr;
+  }
 }

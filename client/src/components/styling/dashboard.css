@@ -1,26 +1,60 @@
-
-.dashboard{
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #FAF9F6;
-  color: black;
-  margin: 30px;
+/* Dashboard Main Container */
+.dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8e9f3 100%);
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
 }
 
-.dashboard h1{
-    padding-top: 20px;
+.dashboard h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  padding: 0;
 }
 
-.dashboard-container-items{
+/* Dashboard Container */
+.dashboard-container {
   display: flex;
-  gap: 10px;
-  margin: 5px;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.dashboard-stocklist{
+/* Stock List Container */
+.dashboard-stocklist {
   display: flex;
   justify-content: center;
-  width: fit;
+  width: 100%;
 }
 
+/* Dashboard Items Container - Charts Row */
+.dashboard-container-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .dashboard-container-items {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard h1 {
+    font-size: 1.5rem;
+  }
+  
+  .dashboard-container-items {
+    grid-template-columns: 1fr;
+  }
+}

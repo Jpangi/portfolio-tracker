@@ -1,11 +1,64 @@
-.pie-chart-card{
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    background-color: white;
-    text-align: center;
-    max-width: 400px; 
-    margin: 5px;
-    padding: 20px; 
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Pie Chart Card Container */
+.pie-chart-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  min-height: 450px;
+  transition: box-shadow 0.3s;
+}
+
+.pie-chart-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Chart Title */
+.pie-chart-card h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+/* Loading and Error States */
+.pie-chart-card p {
+  text-align: center;
+  color: #718096;
+  font-size: 0.875rem;
+  margin: 2rem 0;
+}
+
+/* Recharts Customization */
+.pie-chart-card .recharts-wrapper {
+  margin: 0 auto;
+}
+
+.pie-chart-card .recharts-legend-wrapper {
+  padding-top: 1rem;
+}
+
+.pie-chart-card .recharts-legend-item {
+  margin-bottom: 0.5rem;
+}
+
+.pie-chart-card .recharts-legend-item-text {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pie-chart-card {
+    padding: 1rem;
+    min-height: 400px;
+  }
+  
+  .pie-chart-card h2 {
+    font-size: 1.125rem;
+  }
 }

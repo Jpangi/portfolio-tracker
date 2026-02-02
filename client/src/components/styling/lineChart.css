@@ -1,11 +1,64 @@
-.portfolio-chart-container{
-    display: flex;
-    border-radius: 10px;
-    flex-direction: column;
-    background-color: white;
-    text-align: center;
-    max-width: 400px; 
-    margin: 5px;
-    padding: 20px; 
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Line Chart Container */
+.portfolio-chart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  min-height: 450px;
+  transition: box-shadow 0.3s;
+}
+
+.portfolio-chart-container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Chart Title */
+.portfolio-chart-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+}
+
+/* Chart Wrapper */
+.portfolio-line-chart {
+  flex: 1;
+  min-height: 350px;
+}
+
+/* Loading State */
+.chart-loading {
+  text-align: center;
+  color: #718096;
+  font-size: 0.875rem;
+  padding: 2rem;
+}
+
+/* Chart.js Customization */
+.portfolio-chart-container canvas {
+  max-height: 350px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .portfolio-chart-container {
+    padding: 1rem;
+    min-height: 400px;
+  }
+  
+  .portfolio-chart-title {
+    font-size: 1.125rem;
+  }
+  
+  .portfolio-line-chart {
+    min-height: 300px;
+  }
+  
+  .portfolio-chart-container canvas {
+    max-height: 300px;
+  }
 }

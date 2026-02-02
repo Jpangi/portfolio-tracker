@@ -9,7 +9,7 @@ const StockList = () => {
   const [loading, setLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [lastUpdated, setLastUpdate] = useState(null);
-  const [selectedStock, setSelectedStock] = useState(null);
+  
 
 
   useEffect(() => {

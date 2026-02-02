@@ -1,0 +1,26 @@
+
+.dashboard{
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #FAF9F6;
+  color: black;
+  margin: 30px;
+}
+
+.dashboard h1{
+    padding-top: 20px;
+}
+
+.dashboard-container-items{
+  display: flex;
+  gap: 10px;
+  margin: 5px;
+}
+
+.dashboard-stocklist{
+  display: flex;
+  justify-content: center;
+  width: fit;
+}
+

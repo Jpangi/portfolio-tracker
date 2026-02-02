@@ -34,7 +34,7 @@ const handleSearch = async (e) => {
   }
  return (
     <>
-      <form onSubmit={handleSearch}>
+      <form className="search-form" onSubmit={handleSearch}>
         <label htmlFor="search">Search: </label>
         <input
           value={search}

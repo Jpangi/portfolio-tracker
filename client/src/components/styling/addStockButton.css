@@ -1,0 +1,22 @@
+/* Wrapper for the whole page to center content */
+.search-page {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  min-height: 100vh;       /* full viewport height */
+  background-color: #f0f2f5; /* optional light background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Container for both SearchStock and AddStockButton */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-width: 400px; /* keeps it from stretching too much */
+}
+
+/* AddStockButton form styling */
+.ad

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import SearchStock from "../components/Search";
 import AddStockButton from "../components/AddButton";
-import '../components/styling/addStockbutton.css'
+import '../components/styling/addStockButton.css'
 
 const Search = ({ user }) => {
   // Lifted state - now shared between SearchStock and AddStockButton

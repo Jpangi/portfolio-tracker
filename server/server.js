@@ -9,9 +9,23 @@ const userRoutes = require("./routes/user");
 const stockRoutes = require("./routes/stocks");
 
 app.use(express.json());
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://portfolio-tracker-frontend-u26r.onrender.com",
+];
+
 app.use(
   cors({
-    origin: "http://localhost:5173", // exact frontend URL
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true); // allow non-browser clients
+      if (allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 app.use("/users", userRoutes);

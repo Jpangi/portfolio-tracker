@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import axios from "axios";
 import { BASEURL } from "../constants/constants";
-import './styling/addStockButton.css'
+import '../components/styling/addStockButton.css'
 
 const AddStockButton = ({ stockData, loading, error, setError }) => {
   const [shares, setShares] = useState("");

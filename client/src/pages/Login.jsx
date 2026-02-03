@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useState } from "react";
 import axios from 'axios';
 import { BASEURL } from "../constants/constants";
-import "../components/styling/auth.css";
+import "../components/styling/Auth.css";
 
 const LogIn = (props) => {
   const [formData, setFormData] = useState({

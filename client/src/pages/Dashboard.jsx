@@ -3,7 +3,7 @@ import StockPieChart from "../components/PieChart";
 import { useState } from "react";
 import PortfolioLineChart from "../components/LineChart";
 import "../components/styling/dashboard.css";
-import Navbar from "../common/NavBar";
+
 
 const Dashboard = () => {
   const [stocks, setStocks] = useState([]);
